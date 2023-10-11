@@ -1,0 +1,2275 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\CustomerContract.sol": {
+      "lastModificationDate": 1696961832352,
+      "contentHash": "0df2b81c4bde734e2994dbef783e3841",
+      "sourceName": "contracts/CustomerContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "CustomerContract",
+        "IInvokeOracle"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\interface\\IStatus.sol": {
+      "lastModificationDate": 1696898965118,
+      "contentHash": "be7cf2cb9da1df21893fb05a3dc8ccb0",
+      "sourceName": "contracts/interface/IStatus.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IStatus"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\SampleContract.sol": {
+      "lastModificationDate": 1696920667686,
+      "contentHash": "f41d8b5691f3cb16cf8277e4ceed5741",
+      "sourceName": "contracts/SampleContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "SampleContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
+      "lastModificationDate": 1696588053219,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\PluginClient.sol": {
+      "lastModificationDate": 1696588053810,
+      "contentHash": "6d67c42dd62ea452eddc890d23711aef",
+      "sourceName": "@goplugin/contracts/src/v0.8/PluginClient.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Plugin.sol",
+        "./interfaces/ENSInterface.sol",
+        "./interfaces/PliTokenInterface.sol",
+        "./interfaces/OperatorInterface.sol",
+        "./interfaces/PointerInterface.sol",
+        "./vendor/ENSResolver.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PluginClient"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\Plugin.sol": {
+      "lastModificationDate": 1696588053807,
+      "contentHash": "50390704447c596ea462934e03ca5995",
+      "sourceName": "@goplugin/contracts/src/v0.8/Plugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./vendor/CBORPlugin.sol",
+        "./vendor/BufferPlugin.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Plugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PointerInterface.sol": {
+      "lastModificationDate": 1696588053822,
+      "contentHash": "854cad5f6a83dfa483bf2a8361a09581",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PointerInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PointerInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\ENSResolver.sol": {
+      "lastModificationDate": 1696588053721,
+      "contentHash": "fd2637eac39eddb4a6a95958f2b994f8",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/ENSResolver.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ENSResolver"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\OperatorInterface.sol": {
+      "lastModificationDate": 1696588053779,
+      "contentHash": "05e1e323b1c33c5e9909251a2d766ced",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/OperatorInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./OracleInterface.sol",
+        "./PluginRequestInterface.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OperatorInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PliTokenInterface.sol": {
+      "lastModificationDate": 1696588053801,
+      "contentHash": "c091b1d1150eb2dbac99ea024391854f",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PliTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PliTokenInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\ENSInterface.sol": {
+      "lastModificationDate": 1696588053718,
+      "contentHash": "a39b4d75f49525e15b89b9ddf21d2a0a",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/ENSInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ENSInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\CBORPlugin.sol": {
+      "lastModificationDate": 1696588053694,
+      "contentHash": "1b529f7ade364450b042eab929e02211",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/CBORPlugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BufferPlugin.sol"
+      ],
+      "versionPragmas": [
+        ">= 0.4.19"
+      ],
+      "artifacts": [
+        "CBORPlugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\BufferPlugin.sol": {
+      "lastModificationDate": 1696588053687,
+      "contentHash": "39aaccd30d65d3dad09110fcc57c5c2d",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/BufferPlugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "BufferPlugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\OracleInterface.sol": {
+      "lastModificationDate": 1696588053788,
+      "contentHash": "c234573262b01e8e315ef222f86774aa",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/OracleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OracleInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PluginRequestInterface.sol": {
+      "lastModificationDate": 1696588053815,
+      "contentHash": "ecde989f96a219ae73a1701b68f580bc",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PluginRequestInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PluginRequestInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\FlightsContract.sol": {
+      "lastModificationDate": 1696594874684,
+      "contentHash": "d7875963856bc08a2786403cd21e2251",
+      "sourceName": "contracts/FlightsContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "FlightsContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\BLContract.sol": {
+      "lastModificationDate": 1696843753927,
+      "contentHash": "e7ac2ddf558d4ceba86648ee200e5f7f",
+      "sourceName": "contracts/BLContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "BLContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1696588053262,
+      "contentHash": "95602b04f0b53f1139f4668d123ddeb7",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Address.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1696588053213,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1696588053354,
+      "contentHash": "48686fc32a22a3754b8e63321857dd2a",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1696588053219,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1696588053242,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1696588053319,
+      "contentHash": "48de4c9a3a4ae5ef66a2aa620843413f",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1696588053325,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1696588053324,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1696588053340,
+      "contentHash": "fe63409d8a06818b926cf89e0ea88b1b",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1696588053352,
+      "contentHash": "9488ebd4daacfee8ad04811600d7d061",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1696588053294,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\InvoiceContract.sol": {
+      "lastModificationDate": 1696843874560,
+      "contentHash": "802fec7784375dedec454931f1e2b466",
+      "sourceName": "contracts/InvoiceContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "InvoiceContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\InvoicePluginContract.sol": {
+      "lastModificationDate": 1696898450330,
+      "contentHash": "89441b00244489e7d40e3e31e3bc541c",
+      "sourceName": "contracts/InvoicePluginContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "InvoicePluginContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\dapp-react-solidity-xdc3-main\\contracts\\InvoiceCustomerContract.sol": {
+      "lastModificationDate": 1696952769975,
+      "contentHash": "9d70c52fda9826ccb88544b9e101ec57",
+      "sourceName": "contracts/InvoiceCustomerContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IInvokeOracle",
+        "InvoiceCustomerContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\BLContract.sol": {
+      "lastModificationDate": 1696843753927,
+      "contentHash": "e7ac2ddf558d4ceba86648ee200e5f7f",
+      "sourceName": "contracts/BLContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "BLContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\ERC721.sol": {
+      "lastModificationDate": 1696588053262,
+      "contentHash": "95602b04f0b53f1139f4668d123ddeb7",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721.sol",
+        "./IERC721Receiver.sol",
+        "./extensions/IERC721Metadata.sol",
+        "../../utils/Address.sol",
+        "../../utils/Context.sol",
+        "../../utils/Strings.sol",
+        "../../utils/introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC721"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\Address.sol": {
+      "lastModificationDate": 1696588053213,
+      "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
+      "sourceName": "@openzeppelin/contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.1"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\Strings.sol": {
+      "lastModificationDate": 1696588053354,
+      "contentHash": "48686fc32a22a3754b8e63321857dd2a",
+      "sourceName": "@openzeppelin/contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./math/Math.sol",
+        "./math/SignedMath.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\Context.sol": {
+      "lastModificationDate": 1696588053219,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "@openzeppelin/contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\ERC165.sol": {
+      "lastModificationDate": 1696588053242,
+      "contentHash": "0e7db055ce108f9da7bb6686a00287c0",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721Receiver.sol": {
+      "lastModificationDate": 1696588053325,
+      "contentHash": "c22d4395e33763de693fd440c6fd10e1",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721Receiver.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Receiver"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\IERC721.sol": {
+      "lastModificationDate": 1696588053319,
+      "contentHash": "48de4c9a3a4ae5ef66a2aa620843413f",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/IERC721.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\token\\ERC721\\extensions\\IERC721Metadata.sol": {
+      "lastModificationDate": 1696588053324,
+      "contentHash": "efbc0d15b80a74e34dbe8da0f3e879bb",
+      "sourceName": "@openzeppelin/contracts/token/ERC721/extensions/IERC721Metadata.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../IERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Metadata"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\math\\Math.sol": {
+      "lastModificationDate": 1696588053340,
+      "contentHash": "fe63409d8a06818b926cf89e0ea88b1b",
+      "sourceName": "@openzeppelin/contracts/utils/math/Math.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\math\\SignedMath.sol": {
+      "lastModificationDate": 1696588053352,
+      "contentHash": "9488ebd4daacfee8ad04811600d7d061",
+      "sourceName": "@openzeppelin/contracts/utils/math/SignedMath.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "SignedMath"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\introspection\\IERC165.sol": {
+      "lastModificationDate": 1696588053294,
+      "contentHash": "03e6768535ac4da0e9756f1d8a4a018a",
+      "sourceName": "@openzeppelin/contracts/utils/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\InvoiceContract.sol": {
+      "lastModificationDate": 1696843874560,
+      "contentHash": "802fec7784375dedec454931f1e2b466",
+      "sourceName": "contracts/InvoiceContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "InvoiceContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\CustomerContract.sol": {
+      "lastModificationDate": 1696961832352,
+      "contentHash": "0df2b81c4bde734e2994dbef783e3841",
+      "sourceName": "contracts/CustomerContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "CustomerContract",
+        "IInvokeOracle"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\FlightsContract.sol": {
+      "lastModificationDate": 1696594874684,
+      "contentHash": "d7875963856bc08a2786403cd21e2251",
+      "sourceName": "contracts/FlightsContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "FlightsContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\interface\\IStatus.sol": {
+      "lastModificationDate": 1696898965118,
+      "contentHash": "be7cf2cb9da1df21893fb05a3dc8ccb0",
+      "sourceName": "contracts/interface/IStatus.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IStatus"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\PluginClient.sol": {
+      "lastModificationDate": 1696588053810,
+      "contentHash": "6d67c42dd62ea452eddc890d23711aef",
+      "sourceName": "@goplugin/contracts/src/v0.8/PluginClient.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Plugin.sol",
+        "./interfaces/ENSInterface.sol",
+        "./interfaces/PliTokenInterface.sol",
+        "./interfaces/OperatorInterface.sol",
+        "./interfaces/PointerInterface.sol",
+        "./vendor/ENSResolver.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PluginClient"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@openzeppelin\\contracts\\utils\\Counters.sol": {
+      "lastModificationDate": 1696588053219,
+      "contentHash": "74654e3ae5d7f39555055dfe244dab7a",
+      "sourceName": "@openzeppelin/contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\Plugin.sol": {
+      "lastModificationDate": 1696588053807,
+      "contentHash": "50390704447c596ea462934e03ca5995",
+      "sourceName": "@goplugin/contracts/src/v0.8/Plugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./vendor/CBORPlugin.sol",
+        "./vendor/BufferPlugin.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Plugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\ENSInterface.sol": {
+      "lastModificationDate": 1696588053718,
+      "contentHash": "a39b4d75f49525e15b89b9ddf21d2a0a",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/ENSInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ENSInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PliTokenInterface.sol": {
+      "lastModificationDate": 1696588053801,
+      "contentHash": "c091b1d1150eb2dbac99ea024391854f",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PliTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PliTokenInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\ENSResolver.sol": {
+      "lastModificationDate": 1696588053721,
+      "contentHash": "fd2637eac39eddb4a6a95958f2b994f8",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/ENSResolver.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ENSResolver"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PointerInterface.sol": {
+      "lastModificationDate": 1696588053822,
+      "contentHash": "854cad5f6a83dfa483bf2a8361a09581",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PointerInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PointerInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\OperatorInterface.sol": {
+      "lastModificationDate": 1696588053779,
+      "contentHash": "05e1e323b1c33c5e9909251a2d766ced",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/OperatorInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./OracleInterface.sol",
+        "./PluginRequestInterface.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OperatorInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\CBORPlugin.sol": {
+      "lastModificationDate": 1696588053694,
+      "contentHash": "1b529f7ade364450b042eab929e02211",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/CBORPlugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BufferPlugin.sol"
+      ],
+      "versionPragmas": [
+        ">= 0.4.19"
+      ],
+      "artifacts": [
+        "CBORPlugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\vendor\\BufferPlugin.sol": {
+      "lastModificationDate": 1696588053687,
+      "contentHash": "39aaccd30d65d3dad09110fcc57c5c2d",
+      "sourceName": "@goplugin/contracts/src/v0.8/vendor/BufferPlugin.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "BufferPlugin"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\OracleInterface.sol": {
+      "lastModificationDate": 1696588053788,
+      "contentHash": "c234573262b01e8e315ef222f86774aa",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/OracleInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "OracleInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\node_modules\\@goplugin\\contracts\\src\\v0.8\\interfaces\\PluginRequestInterface.sol": {
+      "lastModificationDate": 1696588053815,
+      "contentHash": "ecde989f96a219ae73a1701b68f580bc",
+      "sourceName": "@goplugin/contracts/src/v0.8/interfaces/PluginRequestInterface.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PluginRequestInterface"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\SampleContract.sol": {
+      "lastModificationDate": 1696920667686,
+      "contentHash": "f41d8b5691f3cb16cf8277e4ceed5741",
+      "sourceName": "contracts/SampleContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "SampleContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\InvoicePluginContract.sol": {
+      "lastModificationDate": 1696898450330,
+      "contentHash": "89441b00244489e7d40e3e31e3bc541c",
+      "sourceName": "contracts/InvoicePluginContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@goplugin/contracts/src/v0.8/PluginClient.sol",
+        "./interface/IStatus.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "InvoicePluginContract"
+      ]
+    },
+    "C:\\SATHYA\\TRADEPOC\\TRADESYNC\\XDC\\tradesync-dapp-react-solidity-xdc3-plugin\\contracts\\InvoiceCustomerContract.sol": {
+      "lastModificationDate": 1696992912727,
+      "contentHash": "9d70c52fda9826ccb88544b9e101ec57",
+      "sourceName": "contracts/InvoiceCustomerContract.sol",
+      "solcConfig": {
+        "version": "0.8.4",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.4"
+      ],
+      "artifacts": [
+        "IInvokeOracle",
+        "InvoiceCustomerContract"
+      ]
+    }
+  }
+}

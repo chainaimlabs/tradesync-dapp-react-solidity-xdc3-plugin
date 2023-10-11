@@ -1,0 +1,9 @@
+{
+  "SampleContract": "0x1aE441F0C9aC1ec9B213E47494e070c74f6E2537",
+  "CustomerContract": "0xB98165E7e0d8D23f5a103555246d03E8e55cb4E9",
+  "FlightsContract": "0x3207dc25E3A01E41fDd10E6D6B7aBD2A70c587fe",
+  "BLContract": "0x33BB53B374Cba61F617cEfb3f37ED4c8f5C0FF5d",
+  "InvoiceContract": "0xCf788Ae82FbB5683d2F649827f1E3728a5B6bCC4",
+  "InvoicePluginContract": "0x0CE382a95217B7bd3b2CC1dbE2a2eD1CDdab34eA",
+  "InvoiceCustomerContract": "0xf51A459c2f36aa17d68D870c275e68Cf388C8863"
+}
