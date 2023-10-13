@@ -23,8 +23,19 @@ interface IStatus {
     struct InvoiceMaster {
         uint256 invoiceId;
         string  invoiceNumber;
-        string  serviceProviderName;
-        address serviceProvider; //Should be metadata hash about the patients
+        string  invoiceContent;        
+        string invoiceContentHash; //Should be metadata hash about the content
+        address serviceProvider;
+        uint256 registeredOn;
+        address registeredBy;
+    }
+
+      struct BLMaster {
+        uint256 blId;
+        string  blNumber;
+        string  blContent;
+        string blContentHash; //Should be metadata hash about the content
+        address serviceProvider;
         uint256 registeredOn;
         address registeredBy;
     }
@@ -40,4 +51,6 @@ interface IStatus {
         uint256 yearmonthdate;
         bool processed;
     }
+
+
 }

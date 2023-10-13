@@ -13,24 +13,26 @@ async function main() {
   console.log("consumer deployed to:", consumer.address);
   const flights = await deploy('FlightsContract', "0xb3db178db835b4dfcb4149b2161644058393267d");
   console.log("flights deployed to:", flights.address);
-  const bl = await deploy('BLContract');
-  console.log("BL deployed to:", bl.address);
-  const invoice = await deploy('InvoiceContract');
-  console.log("Invoice deployed to:", invoice.address);
 
-  const invoiceplugin = await deploy('InvoicePluginContract',"0xb3db178db835b4dfcb4149b2161644058393267d");
-  console.log("InvoicePlugin deployed to:", invoiceplugin.address);
+  const tradesyncplugin = await deploy('TradeSyncPluginContract',"0xb3db178db835b4dfcb4149b2161644058393267d");
+  console.log("tradetyncplugin deployed to:", tradesyncplugin.address);
 
   const invoiceconsumer = await deploy('InvoiceCustomerContract');
-  console.log("InvoiceCustomer deployed to:", invoiceconsumer.address);
+  console.log("invoiceconsumer deployed to:", invoiceconsumer.address);
+
+  const bl721 = await deploy('BL721Contract');
+  console.log("bl721 deployed to:", bl721.address);
+  
+  const invoice721 = await deploy('Invoice721Contract');
+  console.log("invoice721 deployed to:", invoice721.address);
 
   writeFileSync('output.json', JSON.stringify({
     SampleContract: sample.address,
     CustomerContract: consumer.address,
     FlightsContract: flights.address,
-    BLContract: bl.address, 
-    InvoiceContract: invoice.address,
-    InvoicePluginContract: invoiceplugin.address,
+    BL721Contract: bl721.address, 
+    Invoice721Contract: invoice721.address,
+    TradeSyncPluginContract: tradesyncplugin.address,
     InvoiceCustomerContract: invoiceconsumer.address,
   }, null, 2));
 

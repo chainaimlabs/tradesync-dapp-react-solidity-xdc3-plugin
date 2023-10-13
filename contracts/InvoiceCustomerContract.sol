@@ -8,30 +8,46 @@ interface IInvokeOracle {
 }
 
 contract InvoiceCustomerContract {
-    address CONTRACTADDR = 0x4C50a698F8148b2560eAdb50a8397b614DcfF6A0;
+    //address CONTRACTADDR = 0x4C50a698F8148b2560eAdb50a8397b614DcfF6A0;
+    address CONTRACTADDR   = 0xaeDe699b9a8Ed8bA43F8983A0b2F0728acbD6816;
+
     bytes32 public requestId;
 
     uint256 public _counter;
 
     struct Temp{
-        //uint256 id;
+        uint256 id;
         string invoiceNumber;
         string invoiceContent; 
     }
 
-    mapping(uint256 => Temp) public books;
+    mapping(uint256 => Temp) public invoices;
 
     constructor(){
         _counter =1;
     }
 
     function addInvoices(string memory _invoiceNumber, string memory _invoiceContent) public {
-        books[_counter] = Temp(
-            //_counter,
+        invoices[_counter] = Temp(
+            _counter,
             _invoiceNumber,
             _invoiceContent
         );
         _counter+=1;
+    }
+
+    function requestData(address _caller) external returns (bytes32 requestId){
+
+           (requestId) = IInvokeOracle(CONTRACTADDR).requestData({
+            _caller: msg.sender
+        });
+
+        return requestId;
+
+    }
+
+    function showPrice() external view returns (uint256){
+         return IInvokeOracle(CONTRACTADDR).showPrice();
     }
 
 

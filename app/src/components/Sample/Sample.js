@@ -5,35 +5,56 @@ const { executeTransaction, log, queryData } = require('react-solidity-xdc3');
 
 function Sample() {
   const [submitting, setSubmitting] = useState(false);
-  const { provider, sample, consumer, invoiceplugin, blplugin, invoiceconsumer } = useContext(EthereumContext);
+  const { provider, sample, consumer, invoiceplugin, blplugin, invoiceconsumer, account } = useContext(EthereumContext);
   
-  console.log("provider", provider);
-  console.log("sample", sample);
+  console.log("sample.js start provider", provider);
   console.log("consumer", consumer);
-  console.log("invoiceplugin", invoiceplugin);
-  console.log("blplugin", blplugin);
-  console.log("invoiceconsumer", invoiceconsumer);
 
   const registerFlights = async (event) => {
     event.preventDefault();
     setSubmitting(true);
-    //let _flightAddress = "0xA9e6835929f32DD440290b4c81466ff554b82667";
-   // let _flightAddress = "0x5A19EC97F25B4138b3106b3335E23e1e4b77A549";
+   
+    let _flightAddress = sample.address;
 
-    let _flightAddress = "0x5FfeD62A16826Efba7EF390Db6fE2Fd1D07097A5"
+    console.log("sample.js reg sample", sample.address);
+    console.log("sample.js reg sample provider", provider.address);
 
-    let _careerFlightNo = "ING695";
+    console.log("sample.js reg consumer NU ", consumer.address);
+
+    let _careerFlightNo = "1ING695";
     let _serviceProviderName = "Indigo Airlines";
 
-    console.log("sample.js  flightAddress", _flightAddress);
     console.log("sample.js  careerflight no", _careerFlightNo);
-        
     console.log("sample.js serviceProviderName", _serviceProviderName);
+
+    console.log("sample.js  register flightAddress signer" , account);
 
     let response1 = await executeTransaction(sample, provider, 'registerFlights', [_flightAddress, _careerFlightNo, _serviceProviderName]);
     log("registerFlights", "hash", response1.txHash)
     setSubmitting(false);
   }
+
+  const fetchFlight = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+    let _flightId = "1";
+
+    let _flightAddress = sample.address;
+
+
+
+    console.log("sample.js reg sample", sample.address);
+    console.log("sample.js reg sample provider", provider.address);
+
+    console.log("sample.js reg consumer NU ", consumer.address);
+
+    console.log("sample.js  fetch flightid  ",_flightId , ' flightAddress  ' , _flightAddress);
+
+    let response1 = await queryData(sample, provider, 'flights', [_flightId, _flightAddress]);
+    log("submitClaim", "hash", response1)
+    setSubmitting(false);
+  }
+
 
   async function fetchInvoiceFromFile(invoiceString){
 
@@ -51,30 +72,34 @@ function Sample() {
     event.preventDefault();
     setSubmitting(true);
 
-    //let _invoiceplugindemoAddress = "0xEb0b82401D23640ADc0dACB6c45e8c491E677cA5";
-    //let _invoiceplugindemoAddress = "0x5A19EC97F25B4138b3106b3335E23e1e4b77A549";
-    
-    let _invoiceplugindemoAddress ="0x5FfeD62A16826Efba7EF390Db6fE2Fd1D07097A5";
-
-    let _invoiceplugindemonumber = "INV101-1010-0456";
-    let _invoiceplugindemostring = "Invoice101";
-
-        let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
-          
-        let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
+    let _invoiceAddress = sample.address;
+    let _invoiceNumber = "INV101-1010-0456";
+    //let _invoiceDemostring = "Invoice101";
    
-         console.log("sample.js  storageInvoiceContentStringFromFile  ", storageInvoiceContentStringFromFile);
-      
-         console.log("sample.js  invoicedemopluginAddress", _invoiceplugindemoAddress);
-    console.log("sample.js  invoicedemoplugin no", _invoiceplugindemonumber);
-        
-    console.log("sample.js invoicedemo string", _invoiceplugindemostring);
+    let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
+    let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
+    let _invoiceDemostring = JSON.stringify(storageInvoiceContentStringFromFile);
 
-    //let response1 = await executeTransaction(sample, provider, 'tokenizeInvoices', [_invoiceplugindemoAddress, _invoiceplugindemonumber,_invoiceplugindemostring]);
-    
-    let response1 = await executeTransaction(sample, provider, 'tokenizeInvoices', [_invoiceplugindemoAddress, _invoiceplugindemonumber,storageInvoiceContentStringFromFile]);
-    
+    console.log("sample.js  invoicedemopluginAddress", _invoiceAddress);
+    console.log("sample.js  invoicedemoplugin no", _invoiceNumber);
+    console.log("sample.js  invoicedemo string", _invoiceDemostring);
+
+    let response1 = await executeTransaction(sample, provider, 'tokenizeInvoices', [_invoiceAddress,_invoiceNumber,_invoiceDemostring], 0);
+  
     log("tokenizeInvoice", "hash", response1.txHash)
+    setSubmitting(false);
+  }
+
+  const fetchInvoice = async (event) => {
+    event.preventDefault();
+    setSubmitting(true);
+    let _invoiceId = "1";
+
+    let _invoiceAddress = sample.address;
+    let response1 = await queryData(sample, provider, 'invoices', [_invoiceId, _invoiceAddress]);
+
+    log("fetchInvoiceFromXDC", "hash", response1);
+    console.log(" fetched inv ", response1);
     setSubmitting(false);
   }
 
@@ -95,30 +120,8 @@ function Sample() {
     setSubmitting(false);
   }
 
-  const fetchFlight = async (event) => {
-    event.preventDefault();
-    setSubmitting(true);
-    let _flightId = "1";
-    let _flightAddress = "0xA9e6835929f32DD440290b4c81466ff554b82667";
-    let response1 = await queryData(sample, provider, 'flights', [_flightId, _flightAddress]);
-    log("submitClaim", "hash", response1)
-    setSubmitting(false);
-  }
 
-  const fetchInvoice = async (event) => {
-    event.preventDefault();
-    setSubmitting(true);
-    let _invoiceId = "1";
-   // let _fInvDemoNum = "INV101-1010-0456";
-    //let _invoiceplugindemoAddress = "0x5A19EC97F25B4138b3106b3335E23e1e4b77A549";
-    let _invoiceplugindemoAddress = "0x5FfeD62A16826Efba7EF390Db6fE2Fd1D07097A5"
-    //let response1 = await queryData(sample, provider, 'tokenizeInvoices', [_invoiceId,_fInvDemoNum, _invoiceplugindemoAddress]);
-    let response1 = await queryData(sample, provider, 'tokenizeInvoices', [_invoiceId, _invoiceplugindemoAddress]);
 
-    log("fetchInvoiceFromXDC", "hash", response1);
-    console.log(" fetched inv ", response1);
-    setSubmitting(false);
-  }
 
   const getPriceInfo = async (event) => {
     event.preventDefault();
@@ -140,19 +143,21 @@ function Sample() {
     event.preventDefault();
     setSubmitting(true);
     
-    //let bookname = "My Second Book";
+    let bookName ="book-AB-C-1012-0708";
 
-        //let bookname = "{ship:MUM, price:10000 }";
-    //let response = await executeTransaction(consumer, provider, 'addBooks', [bookname], 0);
-    
-   
-    let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
-    let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
-    console.log("sample.js  storageInvoiceContentStringFromFile  ", storageInvoiceContentStringFromFile);
+    console.log("sample.js add book sample  NU ", sample.address);
+    console.log("sample.js add book provider", provider.address);
+    console.log("sample.js add book consumer UUU ", consumer.address);
+    console.log("sample.js add book bookName " , bookName);
 
-    let response = await executeTransaction(consumer, provider, 'addBooks', [storageInvoiceContentStringFromFile], 0);
-    
-    console.log(response);
+    let response = await executeTransaction(consumer, provider, 'addBooks', [bookName], 0);
+
+    //let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
+    //let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
+    //console.log("sample.js  storageInvoiceContentStringFromFile  ", storageInvoiceContentStringFromFile);
+    //let response = await executeTransaction(consumer, provider, 'addBooks', [JSON.stringify(storageInvoiceContentStringFromFile)], 0);
+      
+    console.log(" book . response .. " , bookName , response);
     log("addBook", "hash", response)
     setSubmitting(false);
   }
@@ -160,16 +165,14 @@ function Sample() {
   const addInvoice = async (event) => {
     event.preventDefault();
     setSubmitting(true);
-    //let invoiceContent = "Invoice content";
+    let invoiceNumber = "INV-1011-1727";
 
     let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
     let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
-    console.log("sample.js  storageInvoiceContentStringFromFile  ", storageInvoiceContentStringFromFile);
-
-    //let response = await executeTransaction(invoiceconsumer, provider, 'addInvoices', [storageInvoiceContentStringFromFile], 0);
-    let response = await executeTransaction(consumer, provider, 'addInvoices', [JSON.stringify(storageInvoiceContentStringFromFile)], 0);
+    console.log("sample.js   invoiceNumber storageInvoiceContentStringFromFile  ", invoiceNumber ,JSON.stringify(storageInvoiceContentStringFromFile));
+    let response = await executeTransaction(invoiceconsumer, provider, 'addInvoices', [invoiceNumber,JSON.stringify(storageInvoiceContentStringFromFile)], 0);
   
-    log("addInvoice", "hash", response)
+    log("addInvoice", "hash", response);
     setSubmitting(false);
   }
 
@@ -178,16 +181,21 @@ function Sample() {
     event.preventDefault();
     setSubmitting(true);
 
-    let bookid = 1;
-    let response = await queryData(consumer, provider, 'books', [bookid]);
+   let bookid = 1;
+   //let retBookName ="book-1011-0627";
 
-    //let retBookname = "My Second Book";
+   console.log("sample.js ret book  sample NU ", sample.address);
+   console.log("sample.js ret book  sample provider", provider.address);
+   console.log("sample.js ret book  consumer UUU ", consumer.address);
+   console.log("sample.js ret bbok bookName " , bookid);
+
+   let response = await queryData(consumer, provider, 'books', [bookid]);
     //let response = await queryData(consumer, provider, 'books', [retBookname]);
 
-    console.log("retrieveBook", "hash", " invJsonFromChain  .. " ,  response);
+    console.log(response);
+    //var resJson = JSON.parse(response[1]);
 
-    //const invJsonFromChain = await response.json();
-   
+    //console.log( "resJson  " + resJson.doc_type );
 
     setSubmitting(false);
   }
@@ -197,8 +205,12 @@ function Sample() {
     event.preventDefault();
     setSubmitting(true);
 
-    let invoiceid = 1;
-    let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceid]);
+    let invoiceId = 1;
+    console.log( " retrieve invoiceId  " + invoiceId);
+    let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceId]);
+
+    //let invoiceNumber = "INV-1011-1727";
+    //let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceNumber]);
 
     //let retBookname = "My Second Book";
     //let response = await queryData(consumer, provider, 'books', [retBookname]);

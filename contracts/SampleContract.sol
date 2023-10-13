@@ -6,6 +6,7 @@ import "@goplugin/contracts/src/v0.8/PluginClient.sol";
 import "./interface/IStatus.sol";
 
 contract SampleContract is PluginClient, IStatus {
+
     using Counters for Counters.Counter;
     Counters.Counter private _flightIds;
     Counters.Counter private _insuranceIds;
@@ -104,12 +105,12 @@ contract SampleContract is PluginClient, IStatus {
     }
 
 
-
-    // Tokenize Invoices
+ // Tokenize Invoices
     function tokenizeInvoices(
         address _invoiceAddress,
         string memory _invoiceNumber,
-        string memory _invoiceString
+        string memory _invoiceContent,
+        string memory _invoiceContentHash
     ) public returns (uint256) {
         uint256 _invoiceId = _invoiceIds.current();
         _invoiceIds.increment();
@@ -117,11 +118,13 @@ contract SampleContract is PluginClient, IStatus {
         invoices[_invoiceId][_invoiceAddress] = InvoiceMaster(
             _invoiceId,
             _invoiceNumber,
-            _invoiceString,
+            _invoiceContent,
+            _invoiceContentHash,
             _invoiceAddress,
             block.timestamp,
             msg.sender
         );
+
         emit InvoiceEvents(
             _invoiceId,
             "Invoice Tokenized",
@@ -132,6 +135,7 @@ contract SampleContract is PluginClient, IStatus {
 
         return _invoiceId;
     }
+
 
 
     // Book Flight Delay Insurance
