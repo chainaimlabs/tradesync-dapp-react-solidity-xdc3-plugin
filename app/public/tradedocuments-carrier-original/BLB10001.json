@@ -22,17 +22,17 @@
           "volume": 18,
           "weightUnit": "KGM",
           "volumeUnit": "MTQ",
-          "descriptionOfGoods": "High strength steel furniture",
-    "declaredValue":"200000.00" ,
+          "descriptionOfGoods": " Animal Skin ",
+   	  "declaredValue":"42000.00" ,
           "HSCode": "411510",
           "cargoItems": [
               {
-                  "equipmentReference": "APZU4812090",
+                  "equipmentReference": "AMEU472090",
                   "weight": 10000,
                   "volume": 18,
                   "weightUnit": "KGM",
                   "volumeUnit": "MTQ",
-                  "numberOfPackages": 18,
+                  "numberOfPackages": 7,
                   "packageCode": "A12"
               }
           ]
@@ -41,7 +41,7 @@
   "utilizedTransportEquipments": [
       {
           "equipment": {
-              "equipmentReference": "APZU4812090",
+              "equipmentReference": "AMEU472090",
               "ISOEquipmentCode": "22G1",
               "tareWeight": 12000,
               "weightUnit": "KGM"

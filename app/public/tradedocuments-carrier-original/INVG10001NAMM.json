@@ -59,6 +59,7 @@
 					"SupplierItemDesc": "High Grade Steel Furniture",
 					"PackListNbr": "345678",
 					"ShipmentId": "BL10001",
+					"ContainerId":"APZU4812090",
 					"DateShipped": "2008-01-15",
 					"BarCodeId": "761294008508",
 					"BarCodeType": "GTIN-12"

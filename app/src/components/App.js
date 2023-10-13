@@ -95,9 +95,11 @@ function App() {
     <div className="App">
       <Header />
       <header className="App-header">
-        <h1>Sample Decentralized Application </h1>
-        <p>Powered by react-solidity-xdc3 Package</p>
-        <p>Contributed by GoPlugin(www.goplugin.co)</p>
+        <h3>TradeSync Demo </h3>
+        <h5>Sathya Krishnasamy </h5>
+        <h5>krisat3003@gmail.com  sathya@chainaim.com </h5>
+        <p>uses react-solidity-xdc3 Package</p>
+        <p>thanks to GoPlugin(www.goplugin.co)</p>
         <form onSubmit={connect}>
           <button type="submit" disabled={connecting}>{connecting ? 'Connecting...' : 'Connect'}</button>
         </form>

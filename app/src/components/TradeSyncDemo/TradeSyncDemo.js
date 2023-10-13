@@ -1,51 +1,14 @@
 import { useState, useContext } from 'react';
 import { EthereumContext } from 'react-solidity-xdc3';
 import './TradeSyncDemo.css';
+
 const { executeTransaction, log, queryData } = require('react-solidity-xdc3');
 
 function TradeSyncDemo() {
+
   const [submitting, setSubmitting] = useState(false);
   const { provider, sample, consumer, tradesyncplugin, invoiceconsumer, invoice721, bl721, account } = useContext(EthereumContext);
   
-  /*
-  const registerFlights = async (event) => {
-    event.preventDefault();
-    setSubmitting(true);
-   
-    let _flightAddress = sample.address;
-
-    console.log("sample.js reg sample", sample.address);
-    console.log("sample.js reg consumer", consumer.address);
-
-    let _careerFlightNo = "1ING695";
-    let _serviceProviderName = "Indigo Airlines";
-
-    console.log("sample.js  careerflight no", _careerFlightNo);
-    console.log("sample.js serviceProviderName", _serviceProviderName);
-
-    console.log("sample.js  register flightAddress signer" , account);
-
-    let response1 = await executeTransaction(sample, provider, 'registerFlights', [_flightAddress, _careerFlightNo, _serviceProviderName]);
-    log("registerFlights", "hash", response1.txHash)
-    setSubmitting(false);
-  }
-
-  const fetchFlight = async (event) => {
-    event.preventDefault();
-    setSubmitting(true);
-    let _flightId = "1";
-
-    let _flightAddress = sample.address;
-
-    console.log("sample.js  fetch flightAddress", _flightAddress);
-    console.log("sample.js  fetch flightAddress   sample ..", sample);
-
-    let response1 = await queryData(sample, provider, 'flights', [_flightId, _flightAddress]);
-    log("submitClaim", "hash", response1)
-    setSubmitting(false);
-  }
-*/
-
   async function readContentFromFile(fileString){
 
     console.log (" read content from .. " + fileString);
@@ -76,14 +39,58 @@ function TradeSyncDemo() {
     return hash;
   }
 
-  function validateTradeContentComposition(innerDocContent, innterDocStandard, outerDocContent, outerDocStandard)
+  function validateTradeContentComposition(innerDocContent, innerDocStandard, outerDocContent, outerDocStandard, _integrity)
   {
+ 
+// Sathya Krishnasamy.  Oct 11, 2023 .
+
+    // As an example, I have loaded in the content from some representative integral and 
+    // non-integral documents based on 
+    // the DCSA standard for the Bill of Lading which is the title document. 
+    // and the Consumer Invoice the key document to be tokenized for Account Receivable Financing 
+
+    // The implmentation shows the how the strucutral integrity of the underlying content in the 
+    // documents can be used for actual reconciliations and better yet consistently avoid them in the
+    // first place. These will typically be the combination of document extracts, and the data and metadata
+    // that produced those trade documents in the first place. 
+
+    // These requests are fielded from the engagements ChainAim experts are having with various governments
+    //and trade entities globally, and the implementation is also based on the interpretation of the law
+    // as to how the eBL integrity can be maintained and also use it for driving high productivity. 
+    // currently the paper process actually needs the trade documents to be courier'd. , which the importer bank
+    // and the importer will eventually use to clear the cargo. 
+  
     // TO DO .. to support multiple composition schemes to be plugged in through oracles
     // for evolving standards and physical / digital guidelines.
 
-    var isCompositionValid = new Boolean(true);
- 
+    // The document content and their hash will also be stored, and with the ownership change the verifier
+    // can check for the current owner and the integrity of the tokenized document when procuced looking 
+    // in to the underlying contecxtual integrity 
+
+    // The actual Implementattion will be configuratble based on which element from the 
+    // invoice should be matched with which element in the BL. 
+    // This could differ between corridors, and we will have to evolve the standards. 
+
+    // Finally these structures along with the right oracles and the configurations wil be 
+    // ported to our main platform as NFTs which are currently in another financial cross border-native chain
+    // that needs more flexbility in modeling these integrity constructs. 
+
+  console.log( " Bl standard " + outerDocStandard + " invoice standard " + innerDocStandard);
+  console.log( " Inner Doc Content ( INVOICE ) " + innerDocContent);
+  console.log( " Outer Doc Content ( BL )  " + outerDocContent);
+
+  var integrity = _integrity;
+
+  var isCompositionValid = true;
+    if(integrity == 'y' ){
+       isCompositionValid = true;
+    }
+    else{
+      isCompositionValid = false;
+    }
+
      return isCompositionValid;
+
   }
 
 
@@ -92,7 +99,7 @@ function TradeSyncDemo() {
     setSubmitting(true);
 
     let _tradesyncpluginAddress = tradesyncplugin.address;
-    let _invoiceNumber = "INVG10001-1012-1938";
+    let _invoiceNumber = "INVG10001-1013-0629";
     //let _invoiceDemostring = "Invoice101";
 
     console.log (" tok Inv 1 ", );
@@ -119,7 +126,8 @@ function TradeSyncDemo() {
     setSubmitting(false);
   }
 
-  const fetchInvoice = async (event) => {
+  const fetchInvoice = async (event) =>  {
+
     event.preventDefault();
     setSubmitting(true);
     let _invoiceId = "1";
@@ -130,11 +138,14 @@ function TradeSyncDemo() {
     let response1 = await queryData(tradesyncplugin, provider, 'invoices', [_invoiceId, _tradesyncpluginAddress]);
 
     log("TSD.js fetchInvoiceFromXDC", "hash", response1);
+
     console.log(" fetched inv ", response1);
+    //return response1;
     setSubmitting(false);
+
   }
 
-const tokenizeBL = async (event) => {
+const tokenizeBLG = async (event) => {
 
     event.preventDefault();
     setSubmitting(true);
@@ -155,25 +166,95 @@ const tokenizeBL = async (event) => {
     let _blDemoContentHash = await digestMessage(_blDemoContent);
 
     console.log("TSD.js  bldemopluginAddress", _tradesyncpluginAddress);
-    
     console.log("TSD.js  bldemoplugin no", _blNumber);
-    console.log("TSD.js  blDemo content  ", _blDemoContent);
+    //console.log("TSD.js  blDemo content  ", _blDemoContent);
+    
+    //let invoiceContent =  await fetchInvoice();
+    let invoiceStandard = "namm";
+    let blStandard = "dcsa";
+    let invoiceFileString = "./tradedocuments-carrier-original/INVG10001NAMM.json";
 
-    let invoiceContent ="invoiceContent";
-    let  invoiceStandard = "invoiveStandard";
-    let blContent = "blContent";
-    let blStandard = "blStandard";
 
-    validateTradeContentComposition(invoiceContent, invoiceStandard,blContent,blStandard);
+    let storageInvoiceContentStringFromFile = await readInvoiceFromFile(invoiceFileString);
+    // let invoiceContentJSON = JSON.parse(invoiceContentResponse);
+      let blContentJSON = _blDemoContent;
+      let invoiceContentJSON = JSON.stringify(storageInvoiceContentStringFromFile);
+      //console.log( "invoiceContentJson  " , invoiceContentJSON );
 
-    console.log("TSD.js  blDemo content Hash  ", _blDemoContentHash);
+    let validIntegrity = validateTradeContentComposition(invoiceContentJSON, invoiceStandard,blContentJSON,blStandard,'y');
 
-    let response1 = await executeTransaction(tradesyncplugin, provider, 'tokenizeBLs', [_tradesyncpluginAddress,_blNumber,_blDemoContent,_blDemoContentHash], 0);
-  
-    log("tokenizeBL", "hash", response1.txHash)
+    console.log("TSD.js VALID ", validIntegrity, " blDemo content Hash  ", _blDemoContentHash);
+
+    
+    if( validIntegrity === true  ){
+
+      console.log("TSD.js  blDemo content Hash  ", _blDemoContentHash);
+
+           let response1 = await executeTransaction(tradesyncplugin, provider, 'tokenizeBLs', [_tradesyncpluginAddress,_blNumber,_blDemoContent,_blDemoContentHash], 0);
+           log("tokenizeBL", "hash", response1.txHash)
+
+           console.log(" BL CREATED. Integral and composable with related documents - AR Invoice ");
+
+    }
+    setSubmitting(false);
+  }
+
+  const tokenizeBLB = async (event) => {
+
+    event.preventDefault();
+    setSubmitting(true);
+
+    let _tradesyncpluginAddress = tradesyncplugin.address;
+    let _blNumber = "BLG10001-1012-2045";
+
+    console.log (" tok bl 1 ", );
+    //let blFileString = "./tradedocuments-carrier-original/BLdoc10001.json";
+    let blFileString = "./tradedocuments-carrier-original/BLB10001.json";
+    
+    console.log (" tok bl 2 ", );
+    let storageBLContentStringFromFile = await readBLFromFile(blFileString);
+    console.log (" tok bl 3 .. ",  );
+    let _blDemoContent = JSON.stringify(storageBLContentStringFromFile);
+    console.log (" tok bl 4 .. ", _blDemoContent );
+
+    let _blDemoContentHash = await digestMessage(_blDemoContent);
+
+    console.log("TSD.js  bldemopluginAddress", _tradesyncpluginAddress);
+    console.log("TSD.js  bldemoplugin no", _blNumber);
+   // console.log("TSD.js  blDemo content  ", _blDemoContent);
+    
+    //let invoiceContent =  await fetchInvoice();
+    let invoiceStandard = "namm";
+    let blStandard = "dcsa";
+    let invoiceFileString = "./tradedocuments-carrier-original/INVG10001NAMM.json";
+
+
+    let storageInvoiceContentStringFromFile = await readInvoiceFromFile(invoiceFileString);
+    // let invoiceContentJSON = JSON.parse(invoiceContentResponse);
+      let blContentJSON = _blDemoContent;
+      let invoiceContentJSON = JSON.stringify(storageInvoiceContentStringFromFile);
+     // console.log( "invoiceContentJson  " , invoiceContentJSON );
+
+    let validIntegrity = validateTradeContentComposition(invoiceContentJSON, invoiceStandard,blContentJSON,blStandard,'n');
+
+    console.log("TSD.js VALID ", validIntegrity, " blDemo content Hash  ", _blDemoContentHash);
+
+    console.log(" DISCREPENCY WITH THE INVOICE. PER CONFIGURATION BL IS NOT CREATED..  ");
+
+    
+    if( validIntegrity === true  ){
+
+      console.log("TSD.js  blDemo content Hash  ", _blDemoContentHash);
+
+           let response1 = await executeTransaction(tradesyncplugin, provider, 'tokenizeBLs', [_tradesyncpluginAddress,_blNumber,_blDemoContent,_blDemoContentHash], 0);
+           log("tokenizeBL", "hash", response1.txHash)
+
+    }
+    
     setSubmitting(false);
 
   }
+
 
   const fetchBL = async (event) => {
     event.preventDefault();
@@ -188,8 +269,8 @@ const tokenizeBL = async (event) => {
     log("TSD.js fetchInvoiceFromXDC", "hash", response1);
     console.log(" fetched inv ", response1);
     setSubmitting(false);
+    return response1;
   }
-
 
 
   const addInvoice = async (event) => {
@@ -216,15 +297,10 @@ const tokenizeBL = async (event) => {
     //let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceId]);
     let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceId]);
 
-    //let invoiceNumber = "INV-1011-1727";
-    //let response = await queryData(invoiceconsumer, provider, 'invoices', [invoiceNumber]);
-
-    //let retBookname = "My Second Book";
-    //let response = await queryData(consumer, provider, 'books', [retBookname]);
-
     log("retrieveInvoice", "hash", response)
     setSubmitting(false);
   }
+
 
   const addBook = async (event) => {
     event.preventDefault();
@@ -233,11 +309,6 @@ const tokenizeBL = async (event) => {
     let bookName ="book-1011-0627";
     let response = await executeTransaction(consumer, provider, 'addBooks', [bookName], 0);
 
-    //let invoiceString = "./tradedocuments-carrier-original/Invoice101.json";
-    //let storageInvoiceContentStringFromFile = await fetchInvoiceFromFile(invoiceString);
-    //console.log("sample.js  storageInvoiceContentStringFromFile  ", storageInvoiceContentStringFromFile);
-    //let response = await executeTransaction(consumer, provider, 'addBooks', [JSON.stringify(storageInvoiceContentStringFromFile)], 0);
-      
     console.log(" book . response .. " , bookName , response);
     log("addBook", "hash", response)
     setSubmitting(false);
@@ -277,66 +348,68 @@ const tokenizeBL = async (event) => {
   return <div className="Container">
 
     <div>
-      <h3>Tokenize Invoice</h3><br></br>
+      <h5>Tokenize Invoice</h5>
       <form onSubmit={tokenizeInvoice}>
         <button type="submit" disabled={submitting}>{submitting ? 'Tokenizing.' : 'Invoice '}</button>
       </form>
     </div>
-
+    <br></br>
     <div>
-      <h3>Fetch Invoice from XDC</h3><br></br>
+      <h5>Fetch Invoice XDC</h5><br></br>
       <form onSubmit={fetchInvoice}>
         <button type="submit" disabled={submitting}>{submitting ? 'Fetching..' : 'Fetch Invoice '}</button>
       </form>
     </div>
-
-
+    <br></br>
     <div>
-      <h3>Tokenize BL </h3><br></br>
-      <form onSubmit={tokenizeBL}>
-        <button type="submit" disabled={submitting}>{submitting ? 'Tokenizng..' : 'BL '}</button>
+      <h5>Tokenize BL-GOOD </h5>
+      <form onSubmit={tokenizeBLG}>
+        <button type="submit" disabled={submitting}>{submitting ? 'Tokenizng..' : 'BL-G '}</button>
       </form>
     </div>
-
-
+    <br></br>
     <div>
-      <h3>Fetch BL</h3><br></br>
+      <h5>Tokenize BL-BAD</h5>
+      <form onSubmit={tokenizeBLB}>
+        <button type="submit" disabled={submitting}>{submitting ? 'Tokenizng..' : 'BL-B '}</button>
+      </form>
+    </div>
+    <br></br>
+    <div>
+      <h5>Fetch BL</h5>
       <form onSubmit={fetchBL}>
         <button type="submit" disabled={submitting}>{submitting ? 'Fetching..' : 'Fetch BL '}</button>
       </form>
     </div>
-
-
-
+    <br></br>
      <div>
-     <h3>Add Invoice </h3><br></br>
+     <h5> Add Invoice </h5>
       <form onSubmit={addInvoice}>
       <button type="submit" disabled={submitting}>{submitting ? 'Adding Invoice..' : 'Add Invoice '}</button>
      </form>
     </div>
-
+    <br></br>
     <div>
-     <h3>Retrieve Invoice </h3><br></br>
+     <h5>Retrieve Invoice </h5>
      <form onSubmit={retrieveInvoice}>
        <button type="submit" disabled={submitting}>{submitting ? 'Retrieving Invoice..' : 'Show Invoice '}</button>
       </form>
     </div>
-
-
-
+    <br></br>
     <div>
-      <h3>Get Price Info</h3><br></br>
+      <h5>Get Price Info</h5>
       <form onSubmit={getPriceInfo}>
         <button type="submit" disabled={submitting}>{submitting ? 'Fetching..' : 'Get Price '}</button>
       </form>
     </div>
-
+    <br></br>
     <div>
-     <h3>Show Price</h3><br></br>
+     <h5>Show Price</h5>
       <form onSubmit={showPrice}>
         <button type="submit" disabled={submitting}>{submitting ? 'Fetching..' : 'Show Price '}</button>
      </form>
       </div>
+
 
   </div>
 }
