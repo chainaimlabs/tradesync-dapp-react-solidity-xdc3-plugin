@@ -1,4 +1,33 @@
-# Dapp Sample Implementation using npm package react-solidity-xdc3
+# TRADESYNC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Powered by Plugin(A decentralized Oracle)
 
 This guide will give you a clear direction on how to deploy your smart contract, create react component and wire web3 package to push and pull the data onto/from blockchain.
@@ -66,41 +95,3 @@ yarn install
 yarn start
 ```
 this will start the application in http://localhost:3000 
-- When you click "Register" it writes the data onto blockchain
-- When you click "Fetch", it pulls the data from blockchain
-
-## How to Create a new component and implement this react-solidity-xdc3 / react-solidity-web3 at ease
-- Go to app/src/components/
-- Clone "Sample" folder and name your components (Let's say - Flights)
-- Rename new component Sample.js -> Flights.js
-- Rename new component Sample.css -> Flights.css
-- Update the app.js to have this Flights component
-```
-import Flights from './Flights/Flights';
-```
-- Create an instance for flight contract and abi
-```
-    const flight = await createInstance(flightaddress, flightabi, provider);
-```
-flightabi, flightaddress to read from respective path
-- Set the flight instance in ethereum context like below
-```
-    setethereumContext({ provider, sample,flght, account })
-```
-
-- Update the app.js to have Flights component added under EthereumContext like below
-```
-      <section className="App-content">
-        <EthereumContext.Provider value={ethereumContext}>
-          <Sample />
-          <Flights />
-        </EthereumContext.Provider>
-      </section>
-```
-- Go to Flights.js file and implement this
-- Create functions say - "registerFlights", "fetchFlight"
-- Update "sample" reference to flight 
-- executeTxn() function expects four params "contractInstance,provider,functionName,[params separated by comma, leave if empty]"
-- queryData() function also expects the same four params "contractInstance,provider,functionName,[params separated by comma,leave if empty] "
-
-All Set, now you should be able to write data onto blockchain & read.
