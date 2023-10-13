@@ -1,6 +1,44 @@
 # TRADESYNC
 
 
+TRADESYNC is a trade platform built on blockchain and hyperproductive dAPP for doscument and data handling , provenance and decision convergence.
+
+##Problem Statement
+
+Trade finance, particularly cross-borders, has been opaque limiting operational efficiencies and financial access. Though institutional investors want to enter the space, the lack of transparency and not able to identify reliable assets has been a barrier. Beyond operational issues, it is a working capital issue and most MSMEs particularly in developing nations are excluded from the financial system. Some stats show more than 70% of Indian MSMEs are in the informal sector. Most of them are owner-workers , and predominantly tagged as Geographical Indicator occupations.
+
+##Solution 
+
+Trade Sync is a trade platform for MSME Trade Finance functions. It is a DLT implementation that supports interpretation of the recent law, for effectively using both ownership of the trade finance documents and the underlying content, as factors for actors to prove their ownership. Adds on to basic document pointers, a layer of underlying asset integrity by way of composable tokenized assets.
+
+The title document - the Bill of Lading, and the Commercial Invoice - the Accounts Receivables are interesting to institutional investors if they can be transparent, dispute-free, and reliable.
+
+Tradesync creates these efficiencies by a combination of DLT, AI, and hyper-productive flows, and builds counter-party registries and deep provenance, and composable tokenization to keep the integrity at each layer, and transfer the ownership. For MSMEs, this technology opens up many negotiable instruments and broader financial access.
+
+We are building it with DLT tech that are reliable business ledgers with Fast finality, low transaction fees, and have the pathway for sub-net and public ledgers to have full flexibility. Based on research, we are using the XDC network to build the solution. We are using the Plugin component for interacting with the XDC blockchain and for building on needed Oracle injections. The implementation has provided many feasibility points for us. We are planning to extend this to the launch site in the next few months.
+
+The first set of proof points on the XDC ledger, and the Plugin Client have been successful.
+
+## What's next
+
+Continue to work on these items and expand the designs for effective on-chain and off-chain aggregations. Identify needed enhancements to XDC / Plugin.
+Follow the phygital notions from the law evolution. Paper and eBL co-exist, and natural progression for eBL.
+We will be working on specific studies and design of experiments. Planning a before and after study. 
+Conceptualize and work with XDC Foundation, given that XDC is showing traits of enterprise solutions-oriented functionality in trade/insurance verticals.
+
+## Video
+
+The video is available at :  
+
+https://www.youtube.com/watch?v=Ody_Itgo4FQ
+
+## Presentation Deck
+
+The preseentation deck is available at : [TradeSync Presentation Deck] (./documents/TRADESYNC_V2.ppt)
+
+The software architecture document, and specific XRP ledger features and code are avaialble at : [TradeSync-SoftwareArchitecture-Design] (./documents/TradeInclusive-ArchitectureDesignandXRPL.ppt)
+The profiles of the founders, their technical background in blockchains and trade policy consulting is avaialble at 
+The long github repository is up to date for both the demo and the pre-launch live app builds.
 
 
 
@@ -8,27 +46,9 @@
 
 
 
+## HOW TO RUN TRADESYNC
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Powered by Plugin(A decentralized Oracle)
+##  React-Solidity DAPP   Powered by Plugin(A decentralized Oracle)
 
 This guide will give you a clear direction on how to deploy your smart contract, create react component and wire web3 package to push and pull the data onto/from blockchain.
 
