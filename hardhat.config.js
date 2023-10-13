@@ -26,11 +26,11 @@ module.exports = {
     },
     apothem: {
       url: 'https://erpc.apothem.network',
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: process.env.PRIVATE_KEY
     },
     mainnet: {
       url: 'https://erpc.xinfin.network',
-      accounts: [process.env.PRIVATE_KEY],
+      accounts: process.env.PRIVATE_KEY
     }
   },
   paths: {
