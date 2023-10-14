@@ -34,7 +34,7 @@ https://www.youtube.com/watch?v=Ody_Itgo4FQ
 
 ## Presentation deck : [TradeSync Presentation Deck] (./documents/TRADESYNC-V1.ppt)
 
-### The software architecture document, and screenshots are avaialble at : [TradeSync-SoftwareArchitecture-Design] (https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pptx))
+### The software architecture document, and screenshots are avaialble at : [TradeSync-SoftwareArchitecture-Design] (https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pdf)
 
 https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pptx
 
