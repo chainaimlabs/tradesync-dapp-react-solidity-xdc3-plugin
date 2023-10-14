@@ -32,19 +32,14 @@ The video is available at :
 
 https://www.youtube.com/watch?v=Ody_Itgo4FQ
 
-## Presentation Deck
+## Presentation deck : [TradeSync Presentation Deck] (./documents/TRADEINCLUSIVE-V2.ppt)
 
-The preseentation deck is available at : [TradeSync Presentation Deck] (./documents/TRADESYNC_V2.ppt)
+### The software architecture document, and screenshots are avaialble at : [TradeSync-SoftwareArchitecture-Design] (./documents/TradeSyncArchitectureDesign.docx)
+### The profiles of the founders, their technical background in blockchains and trade policy consulting is avaialble at  [Profiles] (./documents/profiles)
 
-The software architecture document, and specific XRP ledger features and code are avaialble at : [TradeSync-SoftwareArchitecture-Design] (./documents/TradeInclusive-ArchitectureDesignandXRPL.ppt)
-The profiles of the founders, their technical background in blockchains and trade policy consulting is avaialble at 
-The long github repository is up to date for both the demo and the pre-launch live app builds.
+The long github repository is up to date for both the demo and will be updated for the the pre-launch live app builds.
 
-
-
-
-
-
+### Thanks to the XDC and Plugin teams for their support
 
 ## HOW TO RUN TRADESYNC
 
