@@ -29,19 +29,19 @@ Conceptualize and work with XDC Foundation, given that XDC is showing traits of 
 ## Video
 
 The video is available at :  
-
 https://www.youtube.com/watch?v=Ody_Itgo4FQ
 
-## Presentation deck : [TradeSync Presentation Deck] (./documents/TRADESYNC-V1.ppt)
+## Presentation deck : 
+https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pdf
 
-### The software architecture document, and screenshots are avaialble at : [TradeSync-SoftwareArchitecture-Design] (https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pptx))
+### The software architecture document, and screenshots  : 
+https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-ArchDesign.pdf
 
-https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pptx
+### The profiles of the founders, their technical background in blockchains and trade policy consulting is avaialble at :
+https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/profiles)
 
-### The profiles of the founders, their technical background in blockchains and trade policy consulting is avaialble at  [Profiles] (./documents/profiles)
 
 The long github repository is up to date for both the demo and will be updated for the the pre-launch live app builds.
-
 
 ### Thanks to the XDC and Plugin teams for their support
 
