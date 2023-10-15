@@ -119,3 +119,19 @@ yarn install
 yarn start
 ```
 this will start the application in http://localhost:3000 
+
+
+To access from browser, 
+please maeke sure you have XDCpay and PLI installed, and navigate to
+ http://localhost:3000/ 
+
+Click on Connect to make sure all connection initializations are correct before any actions. 
+
+Please open the Tools -> Developer tools on the browser to follow the browser console ( which will indcate the details of the txns )
+
+Then try 
+
+Tokenize Inovice 
+Fetch Invoice 
+Tokenize BL Good
+Tokenize BL Bad
