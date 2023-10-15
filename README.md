@@ -107,8 +107,13 @@ this will deploy the contract in apothem network and contract address will be st
 
 copy down this contract address in app folder, under same output.json
 
+cp output.json ./app/output.json
+cp output.json ./app/src/output.json
+
+cd app
+
 ## How to run client application
-- After copying the contract address run react application using following command
+- After copying the contract address run react application using following command from the app directory
 ```
 yarn install
 yarn start
