@@ -112,7 +112,9 @@ cp output.json ./app/src/output.json
 
 cd app
 
-## How to run client application
+
+
+## How to run client application ( testnet )
 - After copying the contract address run react application using following command from the app directory
 ```
 yarn install
@@ -135,3 +137,15 @@ Tokenize Inovice
 Fetch Invoice 
 Tokenize BL Good
 Tokenize BL Bad
+
+----------------------------------------------------------------------------------------------------------
+
+
+The contract is also deployed in mainnet at the following address
+
+
+  "TradeSyncPluginContract": "0x408a093D607fe318777769Ad858e3c5769F28046",
+
+
+
+
