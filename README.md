@@ -29,7 +29,7 @@ Conceptualize and work with XDC Foundation, given that XDC is showing traits of 
 ## Video
 
 The video is available at :  
-[https://www.youtube.com/watch?v=Ody_Itgo4FQ](https://www.youtube.com/watch?v=Yq1_JtYc96Q)
+https://www.youtube.com/watch?v=Ody_Itgo4FQ
 
 ## Presentation deck : 
 https://github.com/
