@@ -29,10 +29,10 @@ Conceptualize and work with XDC Foundation, given that XDC is showing traits of 
 ## Video
 
 The video is available at :  
-https://www.youtube.com/watch?v=Ody_Itgo4FQ
+[https://www.youtube.com/watch?v=Ody_Itgo4FQ](https://www.youtube.com/watch?v=Yq1_JtYc96Q)
 
 ## Presentation deck : 
-https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/TRADESYNC-V1.pdf
+https://github.com/
 
 ### The software architecture document, and screenshots  : 
 https://github.com/chainaimlabs/tradesync-dapp-react-solidity-xdc3-plugin/blob/main/documents/design
